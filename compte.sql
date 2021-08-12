@@ -1,0 +1,28 @@
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+
+
+DROP TABLE IF EXISTS `compte`;
+CREATE TABLE IF NOT EXISTS `compte` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `numero` varchar(255) NOT NULL,
+  `code` varchar(255) NOT NULL,
+  `solde` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `compte` (`id`, `numero`, `code`, `solde`) VALUES
+(1, '774502231', '1234', 60500),
+(2, '774502235', '1235', 2000),
+(3, '774502229', '1236', 38000),
+(4, '774502224', '1237', 34000),
+(5, '774508513', '1238', 23000);
+COMMIT;
+
